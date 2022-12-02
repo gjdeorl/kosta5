@@ -1,6 +1,6 @@
 package kosta.domain;
 
-import kosta.BoundedContext657Application;
+import kosta.InventoryApplication;
 import javax.persistence.*;
 import java.util.List;
 import lombok.Data;
@@ -28,12 +28,6 @@ public class Inventory  {
     
     
     
-    private Integer qty;
-    
-    
-    
-    
-    
     private String name;
     
     
@@ -41,10 +35,16 @@ public class Inventory  {
     
     
     private Integer price;
+    
+    
+    
+    
+    
+    private Integer qty;
 
 
     public static InventoryRepository repository(){
-        InventoryRepository inventoryRepository = BoundedContext657Application.applicationContext.getBean(InventoryRepository.class);
+        InventoryRepository inventoryRepository = InventoryApplication.applicationContext.getBean(InventoryRepository.class);
         return inventoryRepository;
     }
 

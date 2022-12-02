@@ -3,22 +3,22 @@
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: BoundedContext657
+  name: Inventory
   labels:
-    app: BoundedContext657
+    app: Inventory
 spec:
   replicas: 1
   selector:
     matchLabels:
-      app: BoundedContext657
+      app: Inventory
   template:
     metadata:
       labels:
-        app: BoundedContext657
+        app: Inventory
     spec:
       containers:
-        - name: BoundedContext657
-          image: username/BoundedContext657:latest
+        - name: Inventory
+          image: username/Inventory:latest
           ports:
             - containerPort: 8080
           readinessProbe:
@@ -45,13 +45,13 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: BoundedContext657
+  name: Inventory
   labels:
-    app: BoundedContext657
+    app: Inventory
 spec:
   ports:
     - port: 8080
       targetPort: 8080
   selector:
-    app: BoundedContext657
+    app: Inventory
 

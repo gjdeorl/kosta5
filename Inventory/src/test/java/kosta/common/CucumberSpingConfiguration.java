@@ -1,12 +1,12 @@
 package kosta.common;
 
 
-import kosta.BoundedContext657Application;
+import kosta.InventoryApplication;
 import io.cucumber.spring.CucumberContextConfiguration;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @CucumberContextConfiguration
-@SpringBootTest(classes = { BoundedContext657Application.class })
+@SpringBootTest(classes = { InventoryApplication.class })
 public class CucumberSpingConfiguration {
     
 }
